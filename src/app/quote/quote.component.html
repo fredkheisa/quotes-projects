@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>INSIDE BRILLIANT MINDS !!!</h1>
+    <hr>
+  </div>
+
+  <ul>
+    <div >
+      <div class="card" *ngFor='let quote of quotes'>
+        <li>{{quote.name}}</li> <br>
+        <strong> <app-quote-details [quote]='quote'></app-quote-details></strong>
+      </div>
+    </div>
+  </ul>
+
+  <div class="card" style="width: 78rem;">
+    <div class="card-body">
+      <h5 class="card-title">WANNA ADD YOUR FAVOURITE QUOTE?</h5>
+      <div class="form-group">
+        <button class="btn btn-dark"> <label for="usr"> Enter Your Name:</label></button>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-dark"> <label for="usr">Authors Name:</label></button>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-dark"> <label for="comment">"QUOTE ":</label></button>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <button>SUBMIT NEW QUOTE </button>
+
+    </div>
+  </div>
+
+</div>
