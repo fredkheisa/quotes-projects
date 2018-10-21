@@ -3,34 +3,31 @@
     <h1>INSIDE BRILLIANT MINDS !!!</h1>
     <hr>
   </div>
+</div>
+<div class="jumbotron">
+  <div class="container">
+    <ol>
+      <div *ngFor='let quote of quotes ;let i = index'><br>
+        <li style="width: 88rem;">{{quote.name}} </li>
+        <div class="row">
+          <p><button class="btn btn-outline-success" (click)='add'>like ({{sum}})</button></p>
+          <br> <p><button class="btn btn-outline-danger" (click)='add'>Dislike ({{sum}})</button></p>
 
-  <ul>
-    <div >
-      <div class="card" *ngFor='let quote of quotes'>
-        <li>{{quote.name}}</li> <br>
-        <strong> <app-quote-details [quote]='quote'></app-quote-details></strong>
-      </div>
-    </div>
-  </ul>
 
-  <div class="card" style="width: 78rem;">
-    <div class="card-body">
-      <h5 class="card-title">WANNA ADD YOUR FAVOURITE QUOTE?</h5>
-      <div class="form-group">
-        <button class="btn btn-dark"> <label for="usr"> Enter Your Name:</label></button>
-        <input type="text" class="form-control" id="usr">
-      </div>
-      <div class="form-group">
-        <button class="btn btn-dark"> <label for="usr">Authors Name:</label></button>
-        <input type="text" class="form-control" id="usr">
-      </div>
-      <div class="form-group">
-        <button class="btn btn-dark"> <label for="comment">"QUOTE ":</label></button>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
-      </div>
-      <button>SUBMIT NEW QUOTE </button>
+          <button class="btn btn-outline-primary" (click)='toogleDetails(i)'>more info.</button>
+        </div>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
 
-    </div>
+      </div>
+    </ol>
   </div>
+</div>
+<p *ngIf='quotes.length > 2'></p>
 
+
+<div class="container">
+  <h1>ADD NEW QUOTE TODAY</h1>
+  <div class="row">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  </div>
 </div>

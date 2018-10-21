@@ -1,2 +1,8 @@
-<p>{{quote.description}} </p>
-<p><button class="btn btn-warning"> <div class="card-body" >10</div> likes</button></p>
+<div class="row"><br>
+    <div class="jumbotron">
+        <p>{{quote.description}} </p>
+        <p>posted by :{{quote.register}}</p>
+        <p>time since posted :{{quote.completeDate|dateCount}} days</p>
+        <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
+    </div>
+</div>
