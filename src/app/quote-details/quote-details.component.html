@@ -1,8 +1,12 @@
-<div class="row"><br>
-    <div class="jumbotron">
-        <p>{{quote.description}} </p>
-        <p>posted by :{{quote.register}}</p>
-        <p>time since posted :{{quote.completeDate|dateCount}} days</p>
-        <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
+<div class="ca">
+
+    <div class="row"><br>
+        <div class="card">
+            <p>{{quote.description}} </p>
+            <p>posted by :{{quote.register}}</p>
+            <p>time since posted :{{quote.completeDate|dateCount}} days</p>
+        </div>
     </div>
+    <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
+
 </div>

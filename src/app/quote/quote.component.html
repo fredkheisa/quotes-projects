@@ -10,11 +10,11 @@
 
   <div class="container">
     <div class="jumbotron">
-      <ol >
-        <div   *ngFor='let quote of quotes ;let i = index'><br>
+      <ol>
+        <div *ngFor='let quote of quotes ;let i = index'><br>
           <div class="card"></div>
-          <li  style="width: 88rem;">{{quote.name}} </li>
-          <div  class="row ," >
+          <li style="width: 88rem;">{{quote.name}} </li>
+          <div class="row ,">
             <p><button class="btn btn-outline-success" (click)='add'>like ({{sum}})</button></p>
             <br> <p><button class="btn btn-outline-danger" (click)='add'>Dislike ({{sum}})</button></p>
 
@@ -33,9 +33,15 @@
 
 
   <div class="container">
-    <h2>ADD NEW QUOTE TODAY</h2>
-    <div class="row">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    <div class="card move2" style="width: 28rem;">
+      <div class="jumbotron">
+        <h2>GOT A FAVORITE QUOTE ?</h2>
+        <P>ADD IT BELOW !!</P>
+
+        <div class="row">
+          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+      </div>
     </div>
   </div>
 </div>
