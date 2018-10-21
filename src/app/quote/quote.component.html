@@ -8,7 +8,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container move3">
     <div class="jumbotron">
       <ol>
         <div *ngFor='let quote of quotes ;let i = index'><br>
@@ -19,7 +19,7 @@
             <button class="btn btn-outline-primary" (click)='toogleDetails(i)'>more info.</button>
 
           </div>
-          <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
+          <app-quote-details class="mover" *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
         </div>
         <p *ngIf='quotes.length >5'> KEEP ADDING QUTES ,BE FAMOUS !!!</p>
 
@@ -29,16 +29,15 @@
 
 
 
-  <div class="container">
+
+  <div class="card move2" style="width: 18rem;">
     <div class="jumbotron">
-      <div class="move2" style="width: 28rem;">
+      <h2>GOT A FAVORITE QUOTE?? ADD IT !!</h2>
 
-        <h2>GOT A FAVORITE QUOTE?? ADD IT !!</h2>
-
-        <div class="row">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-        </div>
+      <div class="row">
+        <app-quote-form (addQuote)="addNewQuote($event)" class="move5"></app-quote-form>
       </div>
     </div>
   </div>
+
 </div>

@@ -1,5 +1,6 @@
 .background{
     background-image: url(../../assets/bk.jpg);
+    size: 100%;
     
 }
 
@@ -17,4 +18,8 @@ img{
 .move{
     position: relative;
     left: 450px;
+}
+.move2{
+    position: relative;
+    left: 300px;
 }
