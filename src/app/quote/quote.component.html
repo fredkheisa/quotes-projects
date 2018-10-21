@@ -1,33 +1,40 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1>INSIDE BRILLIANT MINDS !!!</h1>
-    <hr>
-  </div>
-</div>
-<div class="jumbotron">
+<div class="background">
+
   <div class="container">
-    <ol>
-      <div *ngFor='let quote of quotes ;let i = index'><br>
-        <li style="width: 88rem;">{{quote.name}} </li>
-        <div class="row">
-          <p><button class="btn btn-outline-success" (click)='add'>like ({{sum}})</button></p>
-          <br> <p><button class="btn btn-outline-danger" (click)='add'>Dislike ({{sum}})</button></p>
-
-
-          <button class="btn btn-outline-primary" (click)='toogleDetails(i)'>more info.</button>
-        </div>
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
-
-      </div>
-    </ol>
+    <div class="jumboon">
+      <h1><strong>INSIDE A BRILLIANT MIND !!!</strong></h1>
+      <h1 class="move"> "QUOTES"</h1>
+      <hr>
+    </div>
   </div>
-</div>
-<p *ngIf='quotes.length > 2'></p>
+
+  <div class="container">
+    <div class="jumbotron">
+      <ol class="card">
+        <div *ngFor='let quote of quotes ;let i = index'><br>
+          <li style="width: 88rem;">{{quote.name}} </li>
+          <div class="row">
+            <p><button class="btn btn-outline-success" (click)='add'>like ({{sum}})</button></p>
+            <br> <p><button class="btn btn-outline-danger" (click)='add'>Dislike ({{sum}})</button></p>
 
 
-<div class="container">
-  <h1>ADD NEW QUOTE TODAY</h1>
-  <div class="row">
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            <button class="btn btn-outline-primary" (click)='toogleDetails(i)'>more info.</button>
+
+          </div>
+          <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-details>
+        </div>
+        <p *ngIf='quotes.length >5'> KEEP ADDING QUTES ,BE FAMOUS !!!</p>
+
+      </ol>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <h2>ADD NEW QUOTE TODAY</h2>
+    <div class="row">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
   </div>
 </div>

@@ -1,0 +1,21 @@
+.background{
+    background-image: url(../../assets/bk.jpg);
+    background-repeat: none;
+    
+}
+
+h1{
+    color: aliceblue;
+    position: relative;
+    left: 300px;
+}
+.quotes{
+    color: white;
+}
+img{
+}
+
+.move{
+    position: relative;
+    left: 450px;
+}
