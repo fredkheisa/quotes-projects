@@ -9,6 +9,18 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
+  numberOfLikes:number = 0;
+  
+  likeButtonClick(){
+    this.numberOfLikes++;
+
+  }
+
+  dislikeButtonClick(){
+    this.numberOfLikes--;
+  }
+
+
   quotes = [
     new Quote(1, '“When one is pretending the entire body revolts.”', 'By -Anaïs Nin', new Date(2019, 3, 14) ),
     new Quote(2, '“Be there for others, but never leave yourself behind.”', 'By -Dodinsky', new Date(2019, 6, 9)  ),
