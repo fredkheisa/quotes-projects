@@ -10,6 +10,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { RegisterComponent } from './register/register.component';
 import { SumComponent } from './sum/sum.component';
+import { LikeComponent } from './like/like.component';
 
 
 
@@ -22,7 +23,8 @@ import { SumComponent } from './sum/sum.component';
     QuoteFormComponent,
     DateCountPipe,
     RegisterComponent,
-    SumComponent
+    SumComponent,
+    LikeComponent
   ],
   
   imports: [
