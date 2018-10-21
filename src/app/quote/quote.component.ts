@@ -23,9 +23,9 @@ export class QuoteComponent implements OnInit {
 
 
   quotes = [
-    new Quote(1, '“When one is pretending the entire body revolts.”', 'By -Anaïs Nin', new Date(2019, 3, 14)),
-    new Quote(2, '“Be there for others, but never leave yourself behind.”', 'By -Dodinsky', new Date(2019, 6, 9)),
-    new Quote(3, '“Do what you must,And your friends will adjust.”', 'By -Robert Brault', new Date(2019, 1, 12)),
+    new Quote(1, '“When one is pretending the entire body revolts.”', 'By -Anaïs Nin', new Date(2019, 3, 14) ,'frenky'),
+    new Quote(2, '“Be there for others, but never leave yourself behind.”', 'By -Dodinsky', new Date(2019, 6, 9),'frenky'),
+    new Quote(3, '“Do what you must,And your friends will adjust.”', 'By -Robert Brault', new Date(2019, 1, 12),'frenky'),
   ]
 
   addNewQuote(quote) {
