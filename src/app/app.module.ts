@@ -10,6 +10,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DateCountPipe } from './date-count.pipe';
 import { RegisterComponent } from './register/register.component';
 import { SumComponent } from './sum/sum.component';
+import { SweetAlertService } from 'angular-sweetalert-service';
 
 
 
@@ -32,7 +33,9 @@ import { SumComponent } from './sum/sum.component';
   ],
 
 
-  providers: [],
+  providers: [
+    SweetAlertService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
