@@ -1,10 +1,13 @@
 <div class="ca">
 
     <div class="row"><br>
-        <div class="card">
-            <p>{{quote.description}} </p>
-            <p>posted by :{{quote.register}}</p>
-            <p>time since posted :{{quote.completeDate|dateCount}} days</p>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/form.jpg" alt="Card image cap">
+            <div class="card-body">
+                <p>{{quote.description}} </p>
+                <p>posted by :{{quote.register}}</p>
+                <p>time since posted :{{quote.completeDate|dateCount}} days</p>
+            </div>
         </div>
     </div>
     <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
