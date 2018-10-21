@@ -1,5 +1,11 @@
 export class Quote {
-    public showDescription: boolean;
+    private _showDescription: boolean;
+    public get showDescription(): boolean {
+        return this._showDescription;
+    }
+    public set showDescription(value: boolean) {
+        this._showDescription = value;
+    }
     constructor(public id: number, public name: string, public description: string, public completeDate: Date ) {
         this.showDescription=false
     }
