@@ -10,7 +10,9 @@
             </div>
         </div>
     </div>
-    
-    <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
-
+    <div class="row">
+        <p><button class="btn btn-outline-success" (click)="likeButtonClick()">like ({{numberOfLikes}})</button></p>
+        <br> <p><button class="btn btn-outline-danger" (click)="dislikeButtonClick()">Dislike({{numberOfDislikes}})</button></p>
+        <button class="btn btn-danger" (click)='quoteComplete(true)'> Delete </button>
+    </div>
 </div>
