@@ -18,9 +18,15 @@ img{
 .move{
     position: relative;
     left: 450px;
+    
 }
 .move2{
     position: relative;
     /* left: 300px; */
     transform: translate(280%,-57%);
+    box-shadow: 5px 5px 10px 10px rgb(175, 97, 97);
+}
+.jumbotron {
+    box-shadow: 5px 5px 10px 10px grey;
+    
 }
