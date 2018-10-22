@@ -1,4 +1,4 @@
-export class Quote {
+export default class Quote {
     private _showDescription: boolean;
     public get showDescription(): boolean {
         return this._showDescription;

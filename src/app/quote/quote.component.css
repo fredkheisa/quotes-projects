@@ -21,5 +21,6 @@ img{
 }
 .move2{
     position: relative;
-    left: 300px;
+    /* left: 300px; */
+    transform: translate(280%,-57%);
 }
